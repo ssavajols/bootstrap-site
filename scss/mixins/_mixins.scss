@@ -1,0 +1,21 @@
+@mixin prop($property, $value){
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  -ms-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin PIE{
+  -ms-behavior: url(../htc/PIE.htc);behavior: url(../htc/PIE.htc);
+}
+
+@mixin border-radius($value){
+  @include prop(border-radius, $value);
+  @include PIE;
+}
+
+@mixin box-shadow($value){
+  @include prop(box-shadow, $value);
+  @include PIE;
+}
